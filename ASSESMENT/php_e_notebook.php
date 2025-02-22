@@ -7,28 +7,28 @@ $notes = []; // Array to store notes
 // Function to display menu
 function displayMenu()
 {
-    echo "\n========================================\n";
-    echo "      📖 PHP E-Notebook Application     \n";
-    echo "========================================\n";
-    echo "1️⃣ Add Note\n";
-    echo "2️⃣ View Notes\n";
-    echo "3️⃣ Exit\n";
-    echo "----------------------------------------\n";
-    echo "📌 Enter your choice: ";
+    echo "\n-------------------------\n";
+    echo "PHP E-Notebook Application\n";
+    echo "-------------------------------\n";
+    echo "1.Add Note\n";
+    echo "2.View Notes\n";
+    echo "3.Exit\n";
+    echo "-----------------------\n";
+    echo "Enter your choice: ";
 }
 
 // Function to add a note
 function addNote()
 {
     global $notes;
-    echo "\n📝 Enter your note: ";
+    echo "\n Enter your note: ";
     $note = trim(fgets(STDIN)); // Accept user input and remove extra spaces
 
     if (!empty($note)) {
         $notes[] = $note;
-        echo "✅ Note added successfully!\n";
+        echo "Note added successfully!\n";
     } else {
-        echo "❌ Note cannot be empty. Try again.\n";
+        echo "Note cannot be empty. Try again.\n";
     }
 }
 
@@ -36,13 +36,13 @@ function addNote()
 function viewNotes()
 {
     global $notes;
-    echo "\n📜 Your Notes:\n";
+    echo "\n Your Notes:\n";
     
     if (empty($notes)) {
-        echo "⚠️ No notes available. Please add some first.\n";
+        echo "No notes available. Please add some first.\n";
     } else {
         foreach ($notes as $index => $note) {
-            echo "📌 Note " . ($index + 1) . ": $note\n";
+            echo "Note " . ($index + 1) . ": $note\n";
         }
     }
 }
@@ -60,10 +60,10 @@ while (true) {
             viewNotes();
             break;
         case '3':
-            echo "🚀 Exiting E-Notebook. Thank you!\n";
+            echo "Exiting E-Notebook. Thank you!\n";
             exit; // Terminate the program
         default:
-            echo "❌ Invalid choice. Please enter 1, 2, or 3.\n";
+            echo "Invalid choice. Please enter 1, 2, or 3.\n";
     }
 }
 ?>
