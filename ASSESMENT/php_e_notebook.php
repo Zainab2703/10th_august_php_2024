@@ -1,10 +1,9 @@
 <?php
-// E-Notebook Console Application in PHP
-// This application allows users to add and view notes using an array-based approach.
 
-$notes = []; // Array to store notes
 
-// Function to display menu
+$notes = []; 
+
+
 function displayMenu()
 {
     echo "\n-------------------------\n";
@@ -17,12 +16,12 @@ function displayMenu()
     echo "Enter your choice: ";
 }
 
-// Function to add a note
+
 function addNote()
 {
     global $notes;
     echo "\n Enter your note: ";
-    $note = trim(fgets(STDIN)); // Accept user input and remove extra spaces
+    $note = trim(fgets(STDIN)); 
 
     if (!empty($note)) {
         $notes[] = $note;
@@ -32,7 +31,7 @@ function addNote()
     }
 }
 
-// Function to view all notes
+
 function viewNotes()
 {
     global $notes;
@@ -47,11 +46,11 @@ function viewNotes()
     }
 }
 
-// Main loop to keep the program running until the user exits
+
 while (true) {
     displayMenu();
-    $choice = trim(fgets(STDIN)); // Get user choice
-
+    $choice = trim(fgets(STDIN)); 
+	
     switch ($choice) {
         case '1':
             addNote();
@@ -61,7 +60,7 @@ while (true) {
             break;
         case '3':
             echo "Exiting E-Notebook. Thank you!\n";
-            exit; // Terminate the program
+            exit;
         default:
             echo "Invalid choice. Please enter 1, 2, or 3.\n";
     }
