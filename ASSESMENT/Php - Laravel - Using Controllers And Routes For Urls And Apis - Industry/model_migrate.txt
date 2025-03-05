@@ -1,0 +1,4 @@
+php artisan make:model Student -m
+php artisan make:model Teacher -m
+php artisan make:model Club -m
+php artisan make:model Book -m

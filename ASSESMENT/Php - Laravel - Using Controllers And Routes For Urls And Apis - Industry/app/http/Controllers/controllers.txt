@@ -1,0 +1,5 @@
+php artisan make:controller AdminController
+php artisan make:controller StudentController
+php artisan make:controller TeacherController
+php artisan make:controller ClubController
+php artisan make:controller BookController
